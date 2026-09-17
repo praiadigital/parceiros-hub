@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parceiros Hub — cresça com a rede Praia Digital</title>
+<meta name="description" content="Portal de parcerias para imobiliárias, fotógrafos, limpeza e prestadores do litoral paulista.">
+<link rel="canonical" href="https://praia.digital/parceiros-hub/">
+<meta name="robots" content="index, follow">
+<style>
+:root{font-family:system-ui,-apple-system,sans-serif}
+body{margin:0;background:#0f172a;color:#e2e8f0;min-height:100vh}
+.wrap{max-width:760px;margin:0 auto;padding:40px 20px}
+.hero{text-align:center;padding:20px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:20px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:16px;padding:20px}
+.card h2{margin:0 0 6px;font-size:17px}
+.card p{font-size:14px;opacity:.75;margin:0 0 10px}
+.tag{display:inline-block;background:#0ea5e9;color:#fff;border-radius:8px;padding:3px 10px;font-size:12px;font-weight:700}
+.btn{display:inline-block;padding:12px 18px;border-radius:12px;background:#f59e0b;color:#451a03;text-decoration:none;font-weight:800}
+input,select{width:100%;padding:10px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#e2e8f0;margin-top:6px;box-sizing:border-box}
+label{font-size:14px;font-weight:600;margin-top:10px;display:block}
+.ok{background:#022c22;border:1px solid #10b981;border-radius:16px;padding:24px;margin-top:20px;display:none}
+small{opacity:.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <h1>🤝 Parceiros Hub</h1>
+    <p>A maior rede de tecnologia imobiliária do litoral paulista — cresça com a gente.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><span class="tag">Imobiliárias</span><h2>Automação completa</h2><p>IA para descrições, SEO local e captação de leads. Piloto gratuito de 30 dias.</p></div>
+    <div class="card"><span class="tag">Fotógrafos</span><h2>Vitrine de demanda</h2><p>Receba pedidos de ensaios e tours virtuais de imóveis de temporada.</p></div>
+    <div class="card"><span class="tag">Limpeza &amp; Lavanderia</span><h2>Fluxo constante</h2><p>Conecte-se a anfitriões da rede com check-ins semanais garantidos.</p></div>
+    <div class="card"><span class="tag">Manutenção</span><h2>Chamados rápidos</h2><p>Eletricistas, encanadores e maridos de aluguel para a rede de anfitriões.</p></div>
+    <div class="card"><span class="tag">Corretores</span><h2>Leads qualificados</h2><p>Leads pré-qualificados pelo Curador de Leads, prontos para visita.</p></div>
+    <div class="card"><span class="tag">Afiliados</span><h2>20% recorrente</h2><p>Indique os planos da rede e ganhe comissão mensal.</p></div>
+  </div>
+  <div class="card" style="margin-top:24px">
+    <h2>Quero ser parceiro</h2>
+    <label>Nome / empresa</label><input id="nome">
+    <label>Categoria</label>
+    <select id="cat"><option>Imobiliária</option><option>Fotógrafo</option><option>Limpeza</option><option>Manutenção</option><option>Corretor</option><option>Afiliado</option></select>
+    <label>WhatsApp</label><input id="wa" placeholder="(13) 99999-9999">
+    <button class="btn" style="border:0;cursor:pointer;margin-top:14px" onclick="enviar()">Enviar cadastro</button>
+  </div>
+  <div class="ok" id="ok"></div>
+  <small>Resposta em até 24h úteis. Veja também o programa de Afiliados.</small><br><br>
+  <a class="btn" href="https://praiadigital.github.io/afiliados-hub/">Afiliados Hub</a>
+  <a class="btn" href="https://praiadigital.github.io/curador-leads/">Curador de Leads</a>
+  <a class="btn" href="https://praiadigital.github.io/hermes-agents/">Hermes Agents</a>
+</div>
+<script>
+function enviar(){
+  const n=document.getElementById('nome').value.trim(),w=document.getElementById('wa').value.trim();
+  if(!n||!w){alert('Preencha nome e WhatsApp.');return;}
+  const ok=document.getElementById('ok');ok.style.display='block';
+  ok.innerHTML='✅ <strong>'+n+'</strong> cadastrado como <strong>'+document.getElementById('cat').value+'</strong>! Nossa equipe chama no WhatsApp em até 24h úteis.';
+  ok.scrollIntoView({behavior:'smooth'});
+}
+</script>
+<hr style="margin:40px 0 20px;border:none;border-top:1px solid #334155">
+<nav style="font-size:.95em;text-align:center;padding:0 16px 32px;color:#94a3b8">
+<strong>Rede Praia Digital:</strong><br>
+<a style="color:#94a3b8" href="https://praia.digital/">Praia Digital</a> ·
+<a style="color:#94a3b8" href="https://praiadigital.github.io/apps/">Todos os apps</a> ·
+<a style="color:#94a3b8" href="https://praiadigital.github.io/afiliados-hub/">Afiliados</a> ·
+<a style="color:#94a3b8" href="https://praiadigital.github.io/corretores/">Kit do Corretor</a> ·
+<a style="color:#94a3b8" href="https://praiadigital.github.io/curador-leads/">Curador de Leads</a> ·
+<a style="color:#94a3b8" href="https://praiadigital.github.io/hermes-agents/">Hermes Agents</a>
+</nav>
+</body>
+</html>
